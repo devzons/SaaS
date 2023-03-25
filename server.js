@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json({extended: true}))
 
 mongoose.set('strictQuery', true)
-mongoose.connect(process.env.MONGO_URI, {useUnifiedTopology: true}).catch((err) => console.err(err.stack)).then( async () => console.log('Connected to MongoDB!!!'))
+mongoose.connect(process.env.MONGO_URI, { useUnifiedTopology: true}).catch((err) => console.err(err.stack)).then( async () => console.log('Connected to MongoDB!!!'))
 
 const port = process.env.PORT || 4242
 
